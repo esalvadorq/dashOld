@@ -15,10 +15,5 @@ Route::get('product', [ProductController::class, 'index'])
         ->push(__('View Product'), route('admin.product'));
     });
 
-Route::get('product/create', [ProductController::class, 'create'])
-    ->name('create')
-    ->breadcrumbs(function (Trail $trail) {
-        $trail->parent('admin.product')
-        ->push(__('Create Product'), route('admin.product'));
-    });
+
 

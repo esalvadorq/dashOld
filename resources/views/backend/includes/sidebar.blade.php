@@ -48,16 +48,13 @@
 
         {{-- ############ =======>Link Cliente --}}
 
-        <li class="c-sidebar-nav-dropdown">
-            <x-utils.link href="#" icon="c-sidebar-nav-icon cil-people" class="c-sidebar-nav-dropdown-toggle"
-                :text="__('Customer')" />
-            <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item">
-                    <x-utils.link class="c-sidebar-nav-link" :href="route('admin.cliente')"
-                        :active="activeClass(Route::is('admin.cliente.*'), 'c-active')" :text="__('View Customer')" />
-                </li>
-            </ul>
+        <li class="c-sidebar-nav-item">
+            <x-utils.link class="c-sidebar-nav-link" :href="route('admin.cliente')"
+                :active="activeClass(Route::is('admin.dashboard'), 'c-active')"
+                icon="c-sidebar-nav-icon cil-people" :text="__('Customer')" />
         </li>
+
+
 
         {{-- PRODUCTS --}}
         <li class="c-sidebar-nav-dropdown">
@@ -69,8 +66,8 @@
                         :active="activeClass(Route::is('admin.product.*'), 'c-active')" :text="__('View List')" />
                 </li>
                 <li class="c-sidebar-nav-item">
-                    <x-utils.link class="c-sidebar-nav-link" :href="route('admin.cliente')"
-                        :active="activeClass(Route::is('admin.cliente.*'), 'c-active')" :text="__('Category')" />
+                    <x-utils.link class="c-sidebar-nav-link" :href="route('admin.product')"
+                        :active="activeClass(Route::is('admin.product*'), 'c-active')" :text="__('Category')" />
                 </li>
             </ul>
         </li>
