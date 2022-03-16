@@ -15,7 +15,7 @@
 
         @if ($logged_in_user->hasAllAccess())
             <x-slot name="headerActions">
-                <x-utils.link icon="c-icon cil-plus" class="card-header-action" :href="route('admin.cliente.create')"
+                <x-utils.link icon="c-icon cil-plus" class="card-header-action" :href="route('admin.cliente')"
                     :text="__('Create Customer')" />
             </x-slot>
         @endif
