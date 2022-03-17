@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Cliente;
 
+
 class ClienteController extends Controller
 {
     /**
@@ -39,7 +40,26 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        return $request->all();
+         /* $this->validate($request, [
+            'dni' => 'required',
+            'nombre' => 'required',
+            'direccion' => 'required',
+            'telefono' => 'required',
+            'email' => 'required',
+        ]);
+
+        $cliente = new Cliente();
+        $cliente->dni = $request->dni;
+        $cliente->nombre = $request->nombre;
+        $cliente->direccion = $request->direccion;
+        $cliente->telefono = $request->telefono;
+        $cliente->email = $request->email;
+        //$cliente->usuario = auth()->user()->email;
+        $cliente->save();
+
+        return redirect()->route('admin.cliente')->with('mensaje', 'Cliente Agregado!');; */
     }
 
     /**

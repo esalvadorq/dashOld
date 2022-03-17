@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('View Product'))
+@section('title', __('View Category Product'))
 
 {{-- @section('breadcrumb-links')
     @include('backend.includes.partials.breadcrumbs')
@@ -10,13 +10,13 @@
     <x-backend.card>
         <x-slot name="header">
             <i class="cil-layers"></i>
-            @lang('List Product')
+            @lang('Category Product')
         </x-slot>
 
         @if ($logged_in_user->hasAllAccess())
             <x-slot name="headerActions">
-                <x-utils.link icon="c-icon cil-plus" class="card-header-action" :href="route('admin.CreateProduct')"
-                    :text="__('Create Product')" />
+                <x-utils.link icon="c-icon cil-plus" class="card-header-action" :href="route('admin.CreateCategoryProduct')"
+                    :text="__('Create Category Product')" />
             </x-slot>
         @endif
 

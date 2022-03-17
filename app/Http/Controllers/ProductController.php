@@ -11,9 +11,21 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+     public function index()
     {
         return view('backend.product.index');
+    }
+
+
+    public function category()
+    {
+        return view('backend.product.indexcategory');
+    }
+
+    public function createcategory()
+    {
+        return view('backend.product.category');
     }
 
     /**

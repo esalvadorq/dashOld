@@ -66,8 +66,8 @@
                         :active="activeClass(Route::is('admin.product.*'), 'c-active')" :text="__('View List')" />
                 </li>
                 <li class="c-sidebar-nav-item">
-                    <x-utils.link class="c-sidebar-nav-link" :href="route('admin.product')"
-                        :active="activeClass(Route::is('admin.product*'), 'c-active')" :text="__('Category')" />
+                    <x-utils.link class="c-sidebar-nav-link" :href="route('admin.CategoryProduct')"
+                        :active="activeClass(Route::is('admin.CategoryProduct*'), 'c-active')" :text="__('Category')" />
                 </li>
             </ul>
         </li>

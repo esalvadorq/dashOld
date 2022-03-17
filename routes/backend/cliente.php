@@ -1,6 +1,5 @@
-<!-- Ruta y miga de pan  -->
 <?php
-
+/* Ruta y miga de pan  */
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\Backend\DashboardController;
 use Tabuna\Breadcrumbs\Trail;
@@ -12,13 +11,17 @@ Route::get('cliente', [ClienteController::class, 'index'])
     ->name('cliente')
     ->breadcrumbs(function (Trail $trail) {
         $trail->parent('admin.dashboard')
-        ->push(__('View Customer'), route('admin.cliente'));
+            ->push(__('View Customer'), route('admin.cliente'));
     });
 
-Route::get('cliente/create', [ClienteController::class, 'create'])
+Route::get('create', [ClienteController::class, 'create'])
     ->name('create')
     ->breadcrumbs(function (Trail $trail) {
         $trail->parent('admin.cliente')
-        ->push(__('Create Customer'), route('admin.create'));
+            ->push(__('Create Customer'), route('admin.create'));
     });
+
+Route::post('store', [ClienteController::class, 'store'])->name('store');
+
+
 

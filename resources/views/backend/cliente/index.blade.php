@@ -15,13 +15,24 @@
 
         @if ($logged_in_user->hasAllAccess())
             <x-slot name="headerActions">
-                <x-utils.link icon="c-icon cil-plus" class="card-header-action" :href="route('admin.cliente')"
+                <x-utils.link icon="c-icon cil-plus" class="card-header-action" :href="route('admin.create') "
                     :text="__('Create Customer')" />
             </x-slot>
         @endif
 
         <x-slot name="body">
             {{-- <livewire:backend.users-table /> --}}
+
+
+            @if (session('mensaje'))
+            <div class="alert alert-success alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>
+                    {{ session('mensaje') }}
+                </strong>
+            </div>
+        @endif
+
             <div class="container mt-3">
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -29,7 +40,7 @@
 
                             <div class="card-body" style="height: 210px;">
                                 <div class="col-md-2">
-                                    {{-- <a href="{{ route('admin.cliente.create') }}"></a> --}}
+                                    {{-- <a href="{{ route('') }}">test</a> --}}
                                     <input type="text" id='find' placeholder="Search..." class="form-control mb-2">
                                     <input type="text" id='descripcion' placeholder="" class="form-control mb-2" readonly>
                                     <input type="text" id='contenido' placeholder="" class="form-control mb-2" readonly>

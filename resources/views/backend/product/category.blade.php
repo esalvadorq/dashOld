@@ -12,7 +12,7 @@
 
             <x-slot name="headerActions">
                 {{-- <x-utils.link class="card-header-action" :href="route('admin.auth.user.index')" :text="__('Cancel')" /> --}}
-                <x-utils.link class="card-header-action" :href="route('admin.cliente')" :text="__('Cancel')" />
+                <x-utils.link class="card-header-action" :href="route('admin.CategoryProduct')" :text="__('Cancel')" />
             </x-slot>
 
 

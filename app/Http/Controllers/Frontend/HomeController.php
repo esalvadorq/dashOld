@@ -16,6 +16,6 @@ class HomeController
     }
 
     public function clientes(){
-        return view('cliente.index');
+        return view('backend.cliente.index');
     }
 }
